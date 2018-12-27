@@ -1,6 +1,8 @@
 [package]
+authors = ["Antti Keränen <detegr@gmail.com>"]
+edition = "2018"
 name = "raspberry_sidshield"
 version = "0.1.0"
-authors = ["Antti Keränen <detegr@gmail.com>"]
 
 [dependencies]
+rppal = "0.9.0"
