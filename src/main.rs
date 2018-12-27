@@ -1,4 +1,4 @@
-use clap::{App, Arg, SubCommand};
+use clap::{App, Arg};
 use rppal::pwm;
 use std::error::Error;
 use std::io;
