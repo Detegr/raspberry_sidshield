@@ -5,4 +5,5 @@ name = "raspberry_sidshield"
 version = "0.1.0"
 
 [dependencies]
+clap = "2.32.0"
 rppal = "0.9.0"
