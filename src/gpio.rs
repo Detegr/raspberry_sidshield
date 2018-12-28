@@ -27,7 +27,7 @@ const DATA: u8 = 24;
 const SHIFT_CLOCK: u8 = 16;
 const SHIFT_LATCH: u8 = 12;
 const SHIFT_MR: u8 = 9;
-const SID_CLOCK: u8 = 17; // TODO: Must be changed to 18 as PWM only supports GPIO pins 18 and 19!
+//const SID_CLOCK: u8 = 18;
 const SID_CS: u8 = 4;
 const SID_RESET: u8 = 23;
 
@@ -70,7 +70,6 @@ fn reset_6581(gpio: &mut dyn SidGpio) {
     thread::sleep(Duration::from_millis(1));
     gpio.write(SID_RESET, Level::High);
 
-    // TODO: Check 6581 pin 7!
     gpio.write(SID_CS, Level::High);
 }
 
@@ -92,7 +91,7 @@ pub fn init_gpio(disable_gpio: bool) -> rppal::gpio::Result<Box<dyn SidGpio>> {
     gpio.set_mode(SHIFT_CLOCK, Mode::Output);
     gpio.set_mode(SHIFT_LATCH, Mode::Output);
     gpio.set_mode(SHIFT_MR, Mode::Output);
-    gpio.set_mode(SID_CLOCK, Mode::Output);
+    //gpio.set_mode(SID_CLOCK, Mode::Output);
     gpio.set_mode(SID_CS, Mode::Output);
     gpio.set_mode(SID_RESET, Mode::Output);
 
